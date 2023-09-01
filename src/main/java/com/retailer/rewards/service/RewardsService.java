@@ -12,8 +12,8 @@ public class RewardsService {
         for (Transaction transaction : transactions) {
             double amount = transaction.getAmount();
             if (amount > 100) {
-                totalPoints += (amount - 100) * 2 + 50;
-            } else if (amount > 50) {
+                totalPoints += (amount - 100) * 2;
+            } else if (amount > 50 && amount <= 100) {
                 totalPoints += amount - 50;
             }
         }
